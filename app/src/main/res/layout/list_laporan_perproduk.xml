@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/bg_image"
+            android:id="@+id/C_2"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="7dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/img_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/coklat"
+                    android:scaleType="fitXY" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/L_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/C_2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_nama_produk_perproduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Roti Gembong Coklat"
+                android:textColor="@color/text"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans_regular"
+                android:text="Pendapatan"
+                android:textSize="11sp"
+                android:background="@drawable/bg_text_3"/>
+
+            <TextView
+                android:id="@+id/txt_pendapatan_perproduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans_regular"
+                android:text="Rp. 120.000"
+                android:textColor="@color/text"
+                android:textSize="12sp"
+                android:background="@drawable/bg_text_3" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/T_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_orange"
+            android:text="8"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="2dp"
+            android:textStyle="bold"
+            android:textColor="@color/putih"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

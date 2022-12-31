@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_rounded_top_putih"
+    android:backgroundTint="@color/colorAccent"
+    android:padding="20dp">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/x"
+        android:tint="@color/colorAccent"
+        android:backgroundTint="@color/putih"
+        app:fabSize="mini"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:id="@+id/fab_tutup"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Langkah - langkah penambahan stok bahan"
+        android:textColor="@color/putih"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/txt_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.    Pilih dan tekan nama bahan\n2.   Isikan jumlah stok bahan\n3.   Tekan tombol OK untuk menyimpan\n4.   Jika muncul dialog sinkron, bisa di tutup terlebih dahulu atau tekan sinkron ketika telah menyelesaikan input stok bahan"
+        android:textColor="@color/putih"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/txt_step"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*Catatan : \nBagi pengguna baru pengisian stok bahan diwajibkan untuk mengisi semua stok yang tersedia minimal 1. Setelah mengisi semua stok arahkan ke menu sinkron kemudian lakukan sinkronasi data!"
+        android:textColor="@color/putih"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="17sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/txt_note"/>
+
+</LinearLayout>

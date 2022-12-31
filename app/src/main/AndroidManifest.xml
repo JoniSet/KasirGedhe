@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.kasirroti">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:required="false" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_tenan_3"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/logo_tenan_3"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:theme,android:icon">
+        <activity
+            android:name=".RedeemActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RedeemScreen.PoinActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SOPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SinkronDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuthScreen.FotoTutupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StokScreen.StokKeluarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StokScreen.HistoryReturStokActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StokScreen.HistoryPerubahanStokActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LaporanScreen.ExportActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AuthScreen.ProfilOutletActivity"
+            android:exported="true" />
+        <activity
+            android:name=".TransaksiScreen.DetailTransaksiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LaporanScreen.LaporanTransaksiPerbulanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LaporanScreen.LaporanTransaksiPerhariActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LaporanScreen.LaporanTransaksiPertanggalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AuthScreen.GantiPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LaporanScreen.LaporanSemuaTransaskiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".StokScreen.ManajemenStokActivity"
+            android:exported="true" />
+        <activity android:name=".LaporanScreen.LaporanPerProdukActivity" />
+        <activity android:name=".LaporanScreen.LaporanPerKategoriActivity" />
+        <activity android:name=".SettingPrinterActivity" />
+        <activity android:name=".LaporanScreen.GeneralReportActivity" />
+        <activity android:name=".LaporanScreen.LaporanPenjualanPerProdukActivity" />
+        <activity android:name=".LaporanScreen.SemuaLaporanTransActivity" />
+        <activity android:name=".LaporanScreen.LaporanActivity" />
+        <activity android:name=".TransaksiScreen.StrukActivity" />
+        <activity android:name=".TransaksiScreen.PembayaranSuksesActivity" />
+        <activity android:name=".TransaksiScreen.PembayaranActivity" />
+        <activity android:name=".TransaksiScreen.CekOutActivity" />
+        <activity android:name=".AuthScreen.SecondLoginActivity" />
+        <activity android:name=".AuthScreen.FirstLoginActivity" />
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".bantuan.ManajemenStok" />
+        <activity android:name=".RedeemScreen.RedeemActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/mapkey" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.kasirroti.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+
+</manifest>

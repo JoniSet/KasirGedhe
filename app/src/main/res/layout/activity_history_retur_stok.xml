@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StokScreen.HistoryReturStokActivity"
+    android:background="#EDEDED">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/arrow_kiri" />
+
+        <ImageView
+            android:id="@+id/tutorial"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_tutorial" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/img_back"
+            android:text="Riwayat Stok Keluar"
+            android:textColor="@color/putih"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_rounded_bottom_putih">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Stok Keluar"
+            android:textColor="@color/hitam"
+            android:textStyle="bold"
+            android:textSize="9pt"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_orange"
+            android:layout_marginBottom="25dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Semua"
+                android:textColor="@color/putih"
+                android:textStyle="bold"
+                android:textSize="5pt"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:background="@color/hijau"
+                android:id="@+id/txt_semua"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Proses"
+                android:textColor="@color/putih"
+                android:textStyle="bold"
+                android:textSize="5pt"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:id="@+id/txt_proses"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Diterima"
+                android:textColor="@color/putih"
+                android:textStyle="bold"
+                android:textSize="5pt"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:id="@+id/txt_approve"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Ditolak"
+                android:textColor="@color/putih"
+                android:textStyle="bold"
+                android:textSize="5pt"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:id="@+id/txt_denied"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recycler_riwayat"/>
+
+</LinearLayout>

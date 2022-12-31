@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Metode Pembayaran"
+        android:gravity="center"
+        android:fontFamily="@font/notosans_regular"
+        android:textColor="@color/text"
+        android:textSize="20sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:gravity="center"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_text"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/txt_cash"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GoPay"
+            android:gravity="center"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_text"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/txt_gopay"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OVO"
+            android:gravity="center"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_text"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/txt_ovo"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/bg_text"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/txt_shopeePay"
+            android:text="ShopeePay"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transfer"
+            android:gravity="center"
+            android:background="@drawable/bg_text"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/txt_transfer"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dana"
+            android:gravity="center"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_text"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/txt_dana"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Debit"
+            android:gravity="center"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_text"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/txt_debit"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QRis"
+            android:gravity="center"
+            android:background="@drawable/bg_text"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/txt_QRis"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LinkAja"
+            android:gravity="center"
+            android:fontFamily="@font/notosans_regular"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_text"
+            android:padding="10dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/txt_link"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

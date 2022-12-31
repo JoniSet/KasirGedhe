@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StokScreen.ManajemenStokActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:id="@+id/drawer_layout_stok">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_stok"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimaryDark"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_kiri"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/arrow_kiri"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/img_kiri"
+                        android:text="Manajemen Stok"
+                        android:textColor="@color/putih"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/hotlist_bell"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/tutorial"
+                        android:src="@drawable/history" />
+
+                    <ImageView
+                        android:id="@+id/tutorial"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_tutorial" />
+
+                    <TextView
+                        android:id="@+id/hotlist_hot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/bg_orange"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingBottom="1dp"
+                        android:text="1"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+<!--        <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--            android:id="@+id/shimmer_view_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:shimmer_duration="1000">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/R_11"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/C_4"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        app:cardCornerRadius="10dp">-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="#DADADA">-->
+
+<!--                        </RelativeLayout>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginLeft="15dp"-->
+<!--                        android:layout_toRightOf="@+id/C_4"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_stok"-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="25dp"-->
+<!--                            android:layout_marginBottom="5dp"-->
+<!--                            android:background="#6E6E6E"-->
+<!--                            android:textSize="17sp" />-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/txt_nama_stok"-->
+<!--                            app:cardCornerRadius="5dp">-->
+
+
+<!--                            <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                android:id="@+id/shimmerjmlStok"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_alignParentStart="true"-->
+<!--                                android:background="#D57100"-->
+<!--                                app:shimmer_base_color="#D57100"-->
+<!--                                app:shimmer_colored="true"-->
+<!--                                app:shimmer_highlight_color="@color/putih">-->
+
+<!--                                <androidx.cardview.widget.CardView-->
+<!--                                    android:layout_width="30dp"-->
+<!--                                    android:layout_height="20dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:background="@color/colorPrimaryDark"-->
+<!--                                    app:cardCornerRadius="10dp" />-->
+
+
+<!--                            </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jml_stok"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/txt_nama_stok"-->
+<!--                            android:background="@drawable/bg_orange"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:paddingLeft="5dp"-->
+<!--                            android:paddingTop="2dp"-->
+<!--                            android:paddingRight="5dp"-->
+<!--                            android:text="10"-->
+<!--                            android:textColor="@color/putih"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:visibility="gone" />-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                </RelativeLayout>-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/C_41"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        app:cardCornerRadius="10dp">-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="#DADADA">-->
+
+<!--                        </RelativeLayout>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginLeft="15dp"-->
+<!--                        android:layout_toRightOf="@+id/C_41"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_stok1"-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="25dp"-->
+<!--                            android:layout_marginBottom="5dp"-->
+<!--                            android:background="#6E6E6E"-->
+<!--                            android:textSize="17sp" />-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/txt_nama_stok1"-->
+<!--                            app:cardCornerRadius="5dp">-->
+
+
+<!--                            <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                android:id="@+id/shimmerjmlStok1"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_alignParentStart="true"-->
+<!--                                android:background="#D57100"-->
+<!--                                app:shimmer_base_color="#D57100"-->
+<!--                                app:shimmer_colored="true"-->
+<!--                                app:shimmer_highlight_color="@color/putih">-->
+
+<!--                                <androidx.cardview.widget.CardView-->
+<!--                                    android:layout_width="30dp"-->
+<!--                                    android:layout_height="20dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:background="@color/colorPrimaryDark"-->
+<!--                                    app:cardCornerRadius="10dp" />-->
+
+
+<!--                            </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jml_stok1"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/txt_nama_stok1"-->
+<!--                            android:background="@drawable/bg_orange"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:paddingLeft="5dp"-->
+<!--                            android:paddingTop="2dp"-->
+<!--                            android:paddingRight="5dp"-->
+<!--                            android:text="10"-->
+<!--                            android:textColor="@color/putih"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:visibility="gone" />-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                </RelativeLayout>-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:paddingLeft="5dp"-->
+<!--                    android:paddingRight="5dp">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:id="@+id/C_42"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        app:cardCornerRadius="10dp">-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="#DADADA">-->
+
+<!--                        </RelativeLayout>-->
+
+<!--                    </androidx.cardview.widget.CardView>-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginLeft="15dp"-->
+<!--                        android:layout_toRightOf="@+id/C_42"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_nama_stok2"-->
+<!--                            android:layout_width="50dp"-->
+<!--                            android:layout_height="25dp"-->
+<!--                            android:layout_marginBottom="5dp"-->
+<!--                            android:background="#6E6E6E"-->
+<!--                            android:textSize="17sp" />-->
+
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/txt_nama_stok2"-->
+<!--                            app:cardCornerRadius="5dp">-->
+
+
+<!--                            <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                android:id="@+id/shimmerjmlStok2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_alignParentStart="true"-->
+<!--                                android:background="#D57100"-->
+<!--                                app:shimmer_base_color="#D57100"-->
+<!--                                app:shimmer_colored="true"-->
+<!--                                app:shimmer_highlight_color="@color/putih">-->
+
+<!--                                <androidx.cardview.widget.CardView-->
+<!--                                    android:layout_width="30dp"-->
+<!--                                    android:layout_height="20dp"-->
+<!--                                    android:layout_marginStart="10dp"-->
+<!--                                    android:background="@color/colorPrimaryDark"-->
+<!--                                    app:cardCornerRadius="10dp" />-->
+
+
+<!--                            </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+
+<!--                        </androidx.cardview.widget.CardView>-->
+
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txt_jml_stok2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_below="@+id/txt_nama_stok2"-->
+<!--                            android:background="@drawable/bg_orange"-->
+<!--                            android:fontFamily="@font/poppins_regular"-->
+<!--                            android:paddingLeft="5dp"-->
+<!--                            android:paddingTop="2dp"-->
+<!--                            android:paddingRight="5dp"-->
+<!--                            android:text="10"-->
+<!--                            android:textColor="@color/putih"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:visibility="gone" />-->
+
+
+<!--                    </RelativeLayout>-->
+
+<!--                </RelativeLayout>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_stok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_stok"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_home"
+        app:menu="@menu/activity_home_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

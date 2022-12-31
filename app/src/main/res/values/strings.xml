@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Kasir</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="election_results">Election Results</string>
+    <string name="pie_chart">Pie Chart</string>
+
+    <string name="step_retur">
+        1.   Pilih dan tekan stok bahan\n2.   Isikan total pengurangan\n3.   Tuliskan keterangan\n4.   Tekan tombol OK untuk menyimpan
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="printer">
+
+        <item>Bluetooth</item>
+        <item>USB</item>
+        <item>Ethernet</item>
+
+    </string-array>
+
+
+    <string name="mapkey" translatable="false">
+        AIzaSyCKd8ZhubtWBhX4Jvtx9X1Vuu2Pmc4p_Uk
+    </string>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:id="@+id/R_11">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/C_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DADADA">
+
+            <TextView
+                android:id="@+id/txt_kode_stok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Ro"
+                android:textColor="#7E7E7E"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/C_4"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/txt_nama_stok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Roti"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:layout_toLeftOf="@+id/img_a"
+        android:layout_centerVertical="true">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerjmlStok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="#D57100"
+            app:shimmer_base_color="#D57100"
+            app:shimmer_colored="true"
+            app:shimmer_highlight_color="@color/putih">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/colorPrimaryDark"
+                app:cardCornerRadius="10dp" />
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txt_jml_stok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_orange"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp"
+        android:paddingRight="5dp"
+        android:text="10"
+        android:textColor="@color/putih"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_toLeftOf="@+id/img_a"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/kanan"
+        android:layout_margin="10dp"
+        android:id="@+id/img_a"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DADADA"
+        android:layout_below="@id/C_4"
+        android:layout_marginTop="15dp"/>
+
+
+</RelativeLayout>

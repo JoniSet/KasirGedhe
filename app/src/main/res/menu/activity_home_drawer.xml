@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stock"
+            android:icon="@drawable/stick"
+            android:title="Manajemen Stock" />
+        <item
+            android:id="@+id/nav_transaksi"
+            android:icon="@drawable/money"
+            android:title="Sales Transactions" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/report"
+            android:title="Laporan Penjualan" />
+        <item
+            android:id="@+id/nav_poin"
+            android:icon="@drawable/ic_poin"
+            android:title="Redeem Poin" />
+    </group>
+
+    <item android:title="Pengaturan">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/setting"
+                android:title="Setting" />
+            <item
+                android:id="@+id/nav_sync_data"
+                android:icon="@drawable/ic_sync"
+                android:title="Sinkron Data" />
+            <item
+                android:id="@+id/nav_sop"
+                android:icon="@drawable/ic_sop"
+                android:title="SOP" />
+        </menu>
+    </item>
+
+    <item android:title="Akun">
+        <menu>
+            <item
+                android:id="@+id/nav_ubah_password"
+                android:icon="@drawable/akun"
+                android:title="Ubah Password" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="Logout" />
+            <item
+                android:id="@+id/nav_foto"
+                android:icon="@drawable/ic_camera"
+                android:title="Foto" />
+            <item
+                android:id="@+id/nav_tutup_toko"
+                android:icon="@drawable/ic_tutup_toko"
+                android:title="Tutup Toko" />
+        </menu>
+    </item>
+
+</menu>

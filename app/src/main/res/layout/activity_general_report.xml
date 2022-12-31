@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaporanScreen.GeneralReportActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_general"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/C_tanggal"
+                android:visibility="gone">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:background="@color/putih"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    >
+
+                    <CalendarView
+                        android:id="@+id/calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/edt_tglMulai"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Tanggal Mulai"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="@+id/calendar"
+                        app:layout_constraintStart_toStartOf="@+id/calendar"
+                        app:layout_constraintTop_toBottomOf="@+id/calendar" />
+
+                    <EditText
+                        android:id="@+id/edt_tglAkhir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="Tanggal Akhir"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="@+id/edt_tglMulai"
+                        app:layout_constraintStart_toStartOf="@+id/edt_tglMulai"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_tglMulai" />
+
+                    <Button
+                        android:id="@+id/btn_oke"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calendar"
+                        android:background="@drawable/bg_btn_login"
+                        android:fontFamily="@font/notosans_regular"
+                        android:text="Pilih"
+                        android:textColor="@color/putih"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/calendar"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_tglAkhir"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/btn_batal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calendar"
+                        android:background="@drawable/bg_btn_login"
+                        android:fontFamily="@font/notosans_regular"
+                        android:text="Tutup"
+                        android:textColor="@color/putih"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/calendar"
+                        app:layout_constraintTop_toBottomOf="@+id/edt_tglAkhir"
+                        android:layout_marginTop="15dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/L_general"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/R_pilih_hari"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_spinner"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/note" />
+
+                    <TextView
+                        android:id="@+id/T_pilih_hari"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/img_d"
+                        android:text="Hari ini"
+                        android:textColor="@color/text"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/bawah" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/T_judul_laporan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_text_3"
+                    android:fontFamily="@font/notosans_regular"
+                    android:text="LAPORAN HARI INI"
+                    android:textColor="@color/hitam"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_tgl_laporan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_text_3"
+                    android:fontFamily="@font/notosans_regular"
+                    android:text="13 Juli 2021"
+                    android:textColor="@color/text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_layout"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/T_4"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF8800"
+                        android:gravity="center"
+                        android:text="="
+                        android:textColor="@color/putih"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_jml_trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="0"
+                            android:textColor="@color/hitam"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_jml_trans"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Total Transaksi"
+                            android:textColor="@color/hitam"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_layout"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/T_6"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF8800"
+                        android:gravity="center"
+                        android:text="="
+                        android:textColor="@color/putih"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left">
+
+                        <TextView
+                            android:id="@+id/txt_pendapatan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Rp 0"
+                            android:textColor="@color/hitam"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_pendapatan"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Pendapatan"
+                            android:textColor="@color/hitam"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/notosans_regular"
+                    android:text="LAPORAN DALAM GRAFIK"
+                    android:textColor="@color/hitam"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginRight="-10dp"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="8dp"
+                    android:outlineSpotShadowColor="@color/colorAccent">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:minHeight="200dp"
+                        android:layout_margin="15dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/notosans_regular"
+                    android:text="METODE PEMBAYARAN"
+                    android:textColor="@color/hitam"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_metode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/notosans_regular"
+                    android:text="LAPORAN PENJUALAN PERPRODUK"
+                    android:textColor="@color/hitam"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_pergood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/loading_general"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
